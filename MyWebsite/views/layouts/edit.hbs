@@ -1,0 +1,30 @@
+<html>
+{{#if type}}
+{{>navadmin}}
+{{else}}
+{{>nav}}
+{{/if}}
+<body>
+    <div class="container">
+        <form action="/edit" method="POST" class="edit_form">
+            <p id='position'>个人信息管理>编辑信息</p>
+            <hr>
+            <div class="ipt">
+                <p class="iptti">用户名</p>
+                <input type="text" name="userac" value={{account}} class="addipt" disabled="disabled"/>
+                <label class="userInput">
+                    <p class="iptti">密码</p>
+                    <input type="text" name="userpwd" placeholder="请输入密码" value={{pwd}} class="addipt" id='pwdipt'/><p id="pwdinfo" class="info">输入字母、数字和-、_ 3-16位</p></label>
+                </label>
+                <p class="iptti">用户权限等级</p>
+                <input type="text" name="userpm" value={{permission}} class="addipt" disabled="disabled"/>
+            </div>
+            <label class="operButton">
+                <input type="submit" value="确认修改" name="stusend"/>
+            </label>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</html>

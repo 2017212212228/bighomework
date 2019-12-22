@@ -1,0 +1,31 @@
+<html>
+<body>
+	<form action="/login" method="POST">
+		<fieldset>
+			<legend>登录</legend>
+			<ul id="loginitem">
+				<li>
+					<label>用户名:</label>
+					<input type="text" name="username" id="acipt">
+					<p id="acinfo">输入字母、数字和-、_ 3-15位</p>
+				</li>
+				<li>
+					<label>密   码:</label>
+					<input type="password" name="password" id="pwdipt">
+					<p id="pwdinfo">输入字母、数字和-、_ 3-15位</p>
+				</li>
+				<li>
+					<label> <input type="radio" name="usertype" value="admin" id="adminbt">管理员</label>
+					<label> <input type="radio" name="usertype" value="user" id="userbt">用户</label>
+				</li>
+				<li>
+					<label> </label>
+					<input type="submit" value="Submit">
+				</li>
+			</ul>
+        </fieldset>
+	</form>
+</body>
+<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</html>

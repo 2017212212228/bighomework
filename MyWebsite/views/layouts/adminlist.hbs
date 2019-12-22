@@ -1,0 +1,27 @@
+<html>
+<body>
+    <table>
+        <tr>
+            <th>管理员账号</th>
+            <th>管理员密码</th>
+            <th>权限等级</th>
+        </tr>
+        {{#each datas}}
+        <form action="/users/update" method="post">
+            <tr>
+                <td>{{account}}</td>
+                <td>{{pwd}}</td>
+                <td>{{permission}}</td>
+                <td>
+                    <button href="/users/del/{{order.id}}">删除</button>
+                    <input type="hidden" value="{{order.id}}" name="id">
+                    <input type="submit" value="提交">
+                </td> 
+            </tr>
+        </form>
+        {{/each}}
+    </table>
+</body>
+<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</html>

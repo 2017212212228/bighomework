@@ -1,0 +1,55 @@
+<html>
+{{#if type}}
+{{>navadmin}}
+<body>
+    <table>
+        <tr>
+            <th>订单编号</th>
+            <th>客户编号</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+        </tr>
+        {{#each datas}}
+        <form action="/users/update" method="post">
+            <tr>
+                <td>{{order_id}}</td>
+                <td>{{user_id}}</td>
+                <td>{{item}}</td>
+                <td>{{price}}</td>
+                <td>
+                    <button href="/users/del/{{order.id}}">删除</button>
+                    <input type="hidden" value="{{order.id}}" name="id">
+                    <input type="submit" value="提交">
+                </td> 
+            </tr>
+        </form>
+        {{/each}}
+    </table>
+</body>
+
+{{else}}
+{{>nav}}
+<body>
+    <table>
+        <tr>
+            <th>订单编号</th>
+            <th>客户编号</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+        </tr>
+        {{#each datas}}
+        <form action="/users/update" method="post">
+            <tr>
+                <td>{{order_id}}</td>
+                <td>{{user_id}}</td>
+                <td>{{item}}</td>
+                <td>{{price}}</td>
+            </tr>
+        </form>
+        {{/each}}
+    </table>
+</body>
+{{/if}}
+<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</html>
