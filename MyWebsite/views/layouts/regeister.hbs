@@ -1,28 +1,23 @@
 <link rel="stylesheet" href="../css/loginstyle.css">
 <html>
 <body>
-	<form action="/login" method="POST" id="loginform">
+	<form action="/regeisterdb" method="POST" id="loginform">
 		<fieldset id="loginform">
-			<legend>登录</legend>
+			<legend>注册</legend>
 			<ul id="loginitem">
 				<li>
 					<label>用户名:</label>
-					<input type="text" name="username" id="acipt">
+					<input type="text" name="username" id="acipt" value=" ">
 					<p id="acinfo">输入字母、数字和-、_ 3-15位</p>
 				</li>
 				<li>
 					<label>密   码:</label>
-					<input type="password" name="password" id="pwdipt">
+					<input type="password" name="password" id="pwdipt" value=" ">
 					<p id="pwdinfo">输入字母、数字和-、_ 3-15位</p>
 				</li>
 				<li>
-					<label> <input type="radio" name="usertype" value="admin" id="adminbt">管理员</label>
-					<label> <input type="radio" name="usertype" value="user" id="userbt">用户</label>
-				</li>
-				<a href="/regeister" id="reg">立刻注册</a>
-				<li>
 					<label> </label>
-					<input type="submit" value="登录" id="bt">
+					<input type="submit" value="立刻注册" id="bt">
 				</li>
 			</ul>
         </fieldset>

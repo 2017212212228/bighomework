@@ -1,55 +1,53 @@
 <html>
 {{#if type}}
-{{>navadmin}}
-<body>
-    <table>
-        <tr>
-            <th>订单编号</th>
-            <th>客户编号</th>
-            <th>商品名称</th>
-            <th>商品价格</th>
-        </tr>
-        {{#each datas}}
-        <form action="/users/update" method="post">
-            <tr>
-                <td>{{order_id}}</td>
-                <td>{{user_id}}</td>
-                <td>{{item}}</td>
-                <td>{{price}}</td>
-                <td>
-                    <button href="/users/del/{{order.id}}">删除</button>
-                    <input type="hidden" value="{{order.id}}" name="id">
-                    <input type="submit" value="提交">
-                </td> 
-            </tr>
-        </form>
-        {{/each}}
-    </table>
-</body>
-
+    {{#if highpermission}}
+        {{>navadmin3index}}
+    {{else}}
+        {{>navadminindex}}
+    {{/if}}
 {{else}}
-{{>nav}}
+    {{>navindex}}
+{{/if}}
 <body>
-    <table>
+    {{#if issearch}}
+        <p id='position'>首页>查询结果</p>
+    {{else}}
+        <p id='position'>首页>全部订单</p>
+    {{/if}}
+    <form action="/ordersearch/1" method="POST" class="search">
+        <input type="text" name="condition" class="condition" value="{{condition}}">
+        <input type="submit" value="查询" class="searchbt">
+    </form>
+    <table class="table">
         <tr>
-            <th>订单编号</th>
-            <th>客户编号</th>
-            <th>商品名称</th>
-            <th>商品价格</th>
+            <th class="tabletitle">订单编号</th>
+            <th class="tabletitle">客户编号</th>
+            <th class="tabletitle">商品名称</th>
+            <th class="tabletitle">商品价格</th>
         </tr>
         {{#each datas}}
         <form action="/users/update" method="post">
             <tr>
-                <td>{{order_id}}</td>
-                <td>{{user_id}}</td>
-                <td>{{item}}</td>
-                <td>{{price}}</td>
+                <td class="tableitem">{{order_id}}</td>
+                <td class="tableitem">{{user_id}}</td>
+                <td class="tableitem">{{item}}</td>
+                <td class="tableitem">{{price}}</td>
             </tr>
         </form>
         {{/each}}
     </table>
+    {{#if issearch}}
+        {{#each pagecount}}
+            <form action="/ordersearchpage/{{this}}" method="POST" class="pageform">
+                <input type="submit" value="{{this}}" class="pageitem">
+            </form>
+        {{/each}}
+    {{else}}
+        {{#each pagecount}}
+            <a href="/order/{{this}}" class="pageitem">&nbsp&nbsp{{this}}&nbsp&nbsp</a>
+        {{/each}}
+    {{/if}}
 </body>
-{{/if}}
-<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="../js/jquery-3.4.0.js"></script>
+<script type="text/javascript" src="../js/js.js"></script>
 </html>

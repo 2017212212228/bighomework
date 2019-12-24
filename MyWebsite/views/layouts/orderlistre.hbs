@@ -1,0 +1,40 @@
+<html>
+{{#if type}}
+    {{#if highpermission}}
+        {{>navadmin3}}
+    {{else}}
+        {{>navadmin}}
+    {{/if}}
+{{else}}
+    {{>nav}}
+{{/if}}
+<body>
+    <form action="/ordersearch" method="POST">
+        <input type="text" name="condition">
+        <input type="submit" value="查询">
+    </form>
+    <table>
+        <tr>
+            <th>订单编号</th>
+            <th>客户编号</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+        </tr>
+        {{#each datas}}
+        <form action="/users/update" method="post">
+            <tr>
+                <td>{{order_id}}</td>
+                <td>{{user_id}}</td>
+                <td>{{item}}</td>
+                <td>{{price}}</td>
+            </tr>
+        </form>
+        {{/each}}
+    </table>
+    {{#each pagecount}}
+    <a href="/ordersearch/{{this}}">{{this}}</a>
+    {{/each}}
+</body>
+<script type="text/javascript" src="../js/jquery-3.4.0.js"></script>
+<script type="text/javascript" src="../js/js.js"></script>
+</html>

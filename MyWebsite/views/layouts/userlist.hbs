@@ -1,51 +1,59 @@
 <html>
-{{>navadmin3}}
+{{#if highpermission}}
+    {{>navadmin3user}}
+{{else}}
+    {{>navadminuser}}
+{{/if}}
 <body>
     {{#if issearch}}
-        <p id='position'>人员管理>查询结果</p>
+        <p id='position'>用户管理>查询结果</p>
     {{else}}
-        <p id='position'>人员管理>全部人员</p>
+        <p id='position'>用户管理>全部用户</p>
     {{/if}}
-    <form action="/addAdmin" method="post" class="sform" id="add" hidden="true">
+    <form action="/addUser" method="post" class="sform" id="add" hidden="true">
         <div id="addpage" hidden="true" class="spage">
             <input type="button" value="&times;" class="sexit" id="add_exit">
             <div id="addbody">
-            <p class="addipt_tit">管理员账号</p><input type="text" class="addipt" name="newAdminAc">
-            <p class="addipt_tit">管理员密码</p><input type="text" class="addipt" name="newAdminPwd">
-            <p class="addipt_tit">权限等级</p>
-            <select name="newAdminPre" id="status">
+            <p class="addipt_tit">用户账号</p><input type="text" class="addipt" name="newUserAc">
+            <p class="addipt_tit">用户密码</p><input type="text" class="addipt" name="newUserPwd">
+            <p class="addipt_tit">VIP等级</p>
+            <select name="newUserPre" id="status">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
+                <option value="3">3</option>
             </select>
             <input type="submit" id="adddb" value="确认添加">
             </div>
         </div>
     </form>
-    <form action="/editAdmin" method="post" class="sform" id="edi" hidden="true">
+    <form action="/editUser" method="post" class="sform" id="edi" hidden="true">
         <div id="edipage" hidden="true" class="spage">
             <input type="button" value="&times;" class="sexit" id="edi_exit">
             <div id="edibody">
-            <p class="addipt_tit">管理员账号</p><input type="text" class="addipt" name="newAdminAc" readonly = "readonly" id="edi_ac">
-            <p class="addipt_tit">管理员密码</p><input type="text" class="addipt" name="newAdminPwd" id="edi_pwd">
-            <p class="addipt_tit">权限等级</p>
-            <select name="newAdminPre" id="status">
+            <p class="addipt_tit">用户账号</p><input type="text" class="addipt" name="newUserAc" readonly = "readonly" id="edi_ac">
+            <p class="addipt_tit">用户密码</p><input type="text" class="addipt" name="newUserPwd" id="edi_pwd">
+            <p class="addipt_tit">VIP等级</p>
+            <select name="newUserPre" id="status">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
+                <option value="3">3</option>
             </select>
             <input type="submit" id="edidb" value="保存修改">
             </div>
         </div>
     </form>
-    <form action="/adminsearch/1" method="POST" class="search">
+    <form action="/usersearch/1" method="POST" class="search">
         <input type="text" name="condition" value="{{condition}}" class="condition">
         <input type="submit" value="查询" class="searchbt">
         <input type="button" value="添加" id="addbt">
     </form>
     <table class="table">
         <tr>
-            <th class="tabletitle">管理员账号</th>
-            <th class="tabletitle">管理员密码</th>
-            <th class="tabletitle">权限等级</th>
+            <th class="tabletitle">用户账号</th>
+            <th class="tabletitle">用户密码</th>
+            <th class="tabletitle">VIP等级</th>
         </tr>
         {{#each datas}}
         <form action="" method="post" id="adminoperate">
@@ -57,7 +65,7 @@
                     <input type="hidden" value="{{account}}" class="operateac">
                     <input type="hidden" value="{{pwd}}" class="operatepwd">
                     <input type="hidden" value="{{permission}}" class="operatepre">
-                    <button href="/admindel/{{account}}" class="adminoperate">删除</button>
+                    <button href="/userdel/{{account}}" class="adminoperate">删除</button>
                     <input type="button" class="edibt" value="修改">
                 </td> 
             </tr>
@@ -66,13 +74,13 @@
     </table>
     {{#if issearch}}
         {{#each pagecount}}
-            <form action="/adminsearchpage/{{this}}" method="POST" class="pageform">
+            <form action="/usersearchpage/{{this}}" method="POST" class="pageform">
                 <input type="submit" value="{{this}}" class="pageitem">
             </form>
         {{/each}}
     {{else}}
         {{#each pagecount}}
-            <a href="/adminlist/{{this}}" class="pageitem">&nbsp{{this}}&nbsp</a>
+            <a href="/userlist/{{this}}" class="pageitem">{{this}}</a>
         {{/each}}
     {{/if}}
 </body>

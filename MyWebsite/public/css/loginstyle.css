@@ -1,0 +1,63 @@
+#acipt{
+	width: 300px;
+	height: 25px;
+	border-bottom: 1.5px solid #AFAFAF;
+}
+#pwdipt{
+	width: 300px;
+	height: 25px;
+	border-bottom: 1.5px solid #AFAFAF;
+}
+ul>li{
+	list-style: none;
+}
+#loginitem{
+	margin-left: 450px;
+	margin-top:70px;
+}
+.iptti{
+	font-size: 16px;
+	color:#929292;
+	float: left;
+	position: relative;
+	right: 35px;
+	bottom: 60px;
+}
+#sec{
+	position: relative;
+	bottom:90px;
+}
+#acinfo{
+	margin-top:none;
+	position: relative;
+	left: 60px;
+	font-size: 13px;
+	color: #B7B7B7;
+}
+#pwdinfo{
+	margin-top:none;
+	position: relative;
+	left: 60px;
+	font-size: 13px;
+	color: #B7B7B7;
+}
+
+#bt{
+	font-size: 16px;
+	position: relative;
+	right: 10px;
+	top: 50px;
+	width: 360px;
+	height: 40px;
+	background-color:#3687FF;
+	color: white;
+	border: 0px;
+}
+#loginform{
+	margin-top:100px;
+	height: 400px;
+}
+#reg{
+	text-decoration: none;
+	margin-left:290px;
+}

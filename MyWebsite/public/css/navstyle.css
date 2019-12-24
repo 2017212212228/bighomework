@@ -1,0 +1,222 @@
+body{
+	border: 0.2px solid #999999;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333333;
+	font-size: 20px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+}
+#position{
+	margin-left:50px;
+	color:#13227a;
+	font-weight: bold;
+}
+#navtit{
+	font-size: 16px;
+	float: left;
+	position: relative;
+	left: 50px;
+}
+.nav{
+	height: 30px;
+	border-bottom: 1px solid #666666;
+}
+#navul{
+	position: relative;
+	left: 110px;
+	bottom: 4px;
+	margin:0px;
+	margin-top: 11px;
+}
+#navul>li>form>a{
+	margin-right: 50px;
+}
+#navul>li{
+	margin-bottom: 5px;
+}
+.active{
+	border-top: 4px solid blue;
+	color: black;
+	font-weight: bold;
+}
+.search{
+	margin-left:50px;
+}
+.condition{
+	width: 462px;
+	height: 30px;
+}
+.searchbt{
+	height: 30px;
+	width: 80px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-align: center;
+	background-color: #3687FF;
+	border:none;
+	color: white;
+}
+#addbt{
+	height: 30px;
+	width: 80px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-align: center;
+	background-color: #3687FF;
+	border:none;
+	color: white;
+}
+.table{
+	margin-left:50px;
+}
+.tabletitle{
+	padding-right: 50px;
+	margin-bottom:20px;
+}
+.tableitem{
+	padding-right: 50px;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+.adminoperate{
+	height: 30px;
+	width: 60px;
+	padding-right: 10px;
+	margin-top:10px;
+}
+.edibt{
+	height: 30px;
+	width: 60px;
+	margin-right: 30px;
+	margin-top:10px;
+}
+#add{
+	position: absolute;
+	top: 8px;
+	width: 967px;
+	height: 674px;
+	padding-top: 80px;
+	padding-left: 600px;
+}
+#addpage{
+	width: 300px;
+	height: 400px;
+	margin-top:100px;
+	margin-left:40px;
+	background-color: white;
+}
+#edi{
+	position: absolute;
+	top: 8px;
+	width: 967px;
+	height: 674px;
+	padding-top: 80px;
+	padding-left: 600px;
+}
+#edipage{
+	width: 300px;
+	height: 400px;
+	margin-top:100px;
+	margin-left:40px;
+	background-color: white;
+}
+.addipt{
+	margin-left:70px;
+}
+.addipt_tit{
+	margin-left:35px;
+}
+#status{
+	display:block;
+	margin-left:70px;
+	width: 175px;
+	height: 25px;
+}
+#adddb{
+	height: 30px;
+	position: relative;
+	left: 37%;
+	margin-top: 40px;
+	width: 80px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-align: center;
+	background-color: #3687FF;
+	border:none;
+	color: white;
+}
+#edidb{
+	height: 30px;
+	position: relative;
+	left: 37%;
+	margin-top: 40px;
+	width: 80px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-align: center;
+	background-color: #3687FF;
+	border:none;
+	color: white;
+
+}
+.sexit{
+	font-size: 20px;
+	color: red;
+	margin-bottom: 10px;
+} 
+.ipt{
+	height: 450px;
+}
+.iptti{
+	margin-top: 40px;
+	margin-left:50px;
+	display: inline-block;
+	width: 90px;
+	text-align: left;
+}
+.userInput{
+	display: block;
+}
+.info{
+	font-size: 12px;
+	margin-left:145px;
+	color: #666666;
+}
+.operButton{
+	position: absolute;
+	left: 3.6%;
+	top: 420px;
+}
+.editipt{
+	height:30px;
+	width: 200px;
+}
+#stusend{
+	height:40px;
+	width: 295px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-align: center;
+	background-color: #3687FF;
+	border:none;
+	color: white;
+}
+.pageitem{
+	background-color: white;
+	border:none;
+	width: 30px;
+	height: 30px;
+	color: #333333;
+	font-size: 20px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 45px;
+}
+.pageform{
+	display:inline-block;
+}
